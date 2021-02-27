@@ -1,12 +1,17 @@
 body {
   font-size: 25px;
   color: #ffffff;
-  background-color: #00000050;
   -webkit-app-region: drag;
   overflow-y: hidden;
   overflow-x: hidden;
 }
-
+.container{
+  background-color: #00000050;
+  padding: 4px;
+  border-radius: 5px;
+  width: 140;
+  height: 75;
+}
 .time {
   text-align: center;
   line-height: 28px;
@@ -25,6 +30,8 @@ body {
   padding: 4px;
   padding-left: 8px;
   padding-right: 8px;
+  -webkit-app-region: no-drag;
+
 }
 
 svg {

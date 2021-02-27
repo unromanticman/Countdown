@@ -9,6 +9,7 @@ function createWindow () {
     width: 140,
     transparent: true,
     height: 75,
+    resizable:false,
     webPreferences: {
       nodeIntegration: true,
       preload: path.join(__dirname, 'preload.js')
@@ -18,7 +19,10 @@ function createWindow () {
 
   // and load the index.html of the app.
   mainWindow.loadFile('index.html')
-
+  
+  // prevent max window
+  mainWindow.setMaximizable(false)
+  
   ipcMain.on('resize-me-please', (event, arg) => {
   })
 

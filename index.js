@@ -2,18 +2,20 @@ const moment = window.moment
 const { ipcRenderer } = require('electron')
 
 // gobal current second 
-let currentSecond = 50*60
+let currentSecond = 50 * 60
+
+const button = document.getElementById('startBtn');
 
 // helper function 
-function secondConvertHHMMSS(sec){
-  return moment("1900-01-01 00:00:00").add(sec, 'seconds').format("HH:mm:ss") 
+function secondConvertHHMMSS(sec) {
+  return moment("1900-01-01 00:00:00").add(sec, 'seconds').format("HH:mm:ss")
 }
 
-function updateScreenTime(sec){
+function updateScreenTime(sec) {
   document.getElementById('time').innerHTML = secondConvertHHMMSS(sec)
 }
 
-function countdownTimer(){
+function countdownTimer() {
   let timer = setInterval(() => {
     // remove one second
     currentSecond = currentSecond - 1
@@ -30,10 +32,15 @@ function countdownTimer(){
 }
 
 // main
-updateScreenTime(currentSecond)
-document.getElementById('startBtn').addEventListener("click",function(){
-  countdownTimer()  
+
+updateScreenTime(currentSecond) // init time screen
+
+// event setting
+document.getElementById('startBtn').addEventListener("click", () => {
+  countdownTimer()
   document.getElementById('startBtn').style.display = "none"
   document.getElementById('countdownText').style.display = "block"
 })
+
+
 
