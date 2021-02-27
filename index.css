@@ -1,0 +1,39 @@
+body {
+  font-size: 25px;
+  color: #ffffff;
+  background-color: #00000050;
+  -webkit-app-region: drag;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.time {
+  text-align: center;
+  line-height: 28px;
+}
+
+.control {
+  text-align: right;
+  line-height: 28px;
+}
+
+.dark-btn {
+  background-color: transparent;
+  border: #fff solid 1px;
+  border-radius: 4px;
+  color: #fff;
+  padding: 4px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+svg {
+  fill: white;
+  width: 16px;
+  height: 16px;
+}
+
+.countdownText{
+  display: none;
+  font-size: 14px;
+}
