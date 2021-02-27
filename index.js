@@ -1,8 +1,10 @@
 const moment = window.moment
-const { ipcRenderer } = require('electron')
+const screenshot = require('screenshot-desktop')
+
 
 // gobal current second 
-let currentSecond = 50 * 60
+let currentSecond = 10//0 * 60
+const startSecond = currentSecond
 
 const button = document.getElementById('startBtn');
 
@@ -25,9 +27,12 @@ function countdownTimer() {
     // when time reaching 0
     if (currentSecond <= 0) {
       clearInterval(timer)
+      document.getElementById('countdownText').innerHTML = "[Finish " + secondConvertHHMMSS(startSecond) +"]"
+      // absolute paths work too. so do pngs
+      screenshot({ filename: 'C:\\Users\\user\\Desktop\\folder\\'+
+      moment(new Date()).format('YYYY-MM-DD HH-mm-ss') 
+      +'.png' })
     }
-    ipcRenderer.send('resize-me-please')
-
   }, 1000)
 }
 
