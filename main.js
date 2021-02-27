@@ -9,8 +9,9 @@ function createWindow () {
     width: 140,
     transparent: true,
     height: 75,
-    resizable:false,
+   // resizable:false,
     webPreferences: {
+      enableRemoteModule: true,
       nodeIntegration: true,
       preload: path.join(__dirname, 'preload.js')
     } ,
@@ -21,13 +22,13 @@ function createWindow () {
   mainWindow.loadFile('index.html')
   
   // prevent max window
-  mainWindow.setMaximizable(false)
+  // mainWindow.setMaximizable(false)
   
   ipcMain.on('resize-me-please', (event, arg) => {
   })
 
   // Open the DevTools.
-  // mainWindow.webContents.openDevTools()
+   mainWindow.webContents.openDevTools()
 }
 
 // This method will be called when Electron has finished

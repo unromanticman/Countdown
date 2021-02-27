@@ -44,3 +44,8 @@ svg {
   display: none;
   font-size: 14px;
 }
+
+.settings{
+  -webkit-app-region: no-drag;
+
+}

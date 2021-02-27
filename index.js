@@ -1,7 +1,6 @@
 const moment = window.moment
 const screenshot = require('screenshot-desktop')
 
-
 // gobal current second 
 let currentSecond = 10//0 * 60
 const startSecond = currentSecond
@@ -56,5 +55,22 @@ document.getElementById('startBtn').addEventListener("click", () => {
   document.getElementById('countdownText').style.display = "block"
 })
 
+document.getElementById('settings').addEventListener("click", () => {
+
+  createBrowserWindow()
+})
 
 
+
+function createBrowserWindow() {
+  const remote = require('electron').remote;
+  const BrowserWindow = remote.BrowserWindow;
+  const win = new BrowserWindow({
+    height: 300,
+    frame: true,
+    alwaysOnTop:false,
+    width: 400
+  });
+
+  win.webContents.openDevTools()
+}
