@@ -9,6 +9,17 @@ const startSecond = currentSecond
 const button = document.getElementById('startBtn');
 
 // helper function 
+function takeScreenshot(){
+  var fs = require('fs');
+  var dir = './screenshot'
+  if (!fs.existsSync(dir)){
+      fs.mkdirSync(dir);
+  }
+  screenshot({ filename: '.\\screenshot\\'+"countdown-"+
+  moment(new Date()).format('YYYY-MM-DD HH-mm-ss') 
+  +'.png' })
+}
+
 function secondConvertHHMMSS(sec) {
   return moment("1900-01-01 00:00:00").add(sec, 'seconds').format("HH:mm:ss")
 }
@@ -29,9 +40,7 @@ function countdownTimer() {
       clearInterval(timer)
       document.getElementById('countdownText').innerHTML = "[Finish " + secondConvertHHMMSS(startSecond) +"]"
       // absolute paths work too. so do pngs
-      screenshot({ filename: 'C:\\Users\\user\\Desktop\\folder\\'+
-      moment(new Date()).format('YYYY-MM-DD HH-mm-ss') 
-      +'.png' })
+      takeScreenshot()
     }
   }, 1000)
 }
