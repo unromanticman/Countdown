@@ -8,7 +8,7 @@ function createWindow () {
     frame: false,
     width: 140,
     transparent: true,
-    height: 75,
+    height: 80,
    // resizable:false,
     webPreferences: {
       enableRemoteModule: true,
@@ -23,12 +23,10 @@ function createWindow () {
   
   // prevent max window
   // mainWindow.setMaximizable(false)
-  
-  ipcMain.on('resize-me-please', (event, arg) => {
-  })
+
 
   // Open the DevTools.
-   mainWindow.webContents.openDevTools()
+  // mainWindow.webContents.openDevTools()
 }
 
 // This method will be called when Electron has finished

@@ -52,7 +52,7 @@ updateScreenTime(currentSecond) // init time screen
 document.getElementById('startBtn').addEventListener("click", () => {
   countdownTimer()
   document.getElementById('startBtn').style.display = "none"
-  document.getElementById('countdownText').style.display = "block"
+  document.getElementById('countdownText').style.display = "inline"
 })
 
 document.getElementById('settings').addEventListener("click", () => {
@@ -63,14 +63,20 @@ document.getElementById('settings').addEventListener("click", () => {
 
 
 function createBrowserWindow() {
+
   const remote = require('electron').remote;
   const BrowserWindow = remote.BrowserWindow;
   const win = new BrowserWindow({
     height: 300,
-    frame: true,
-    alwaysOnTop:false,
-    width: 400
+    frame: false,
+    transparent:true,
+    alwaysOnTop:true,
+    width: 280
   });
+  win.loadFile('settings.html')
+  
+  // prevent max window
+  win.setMaximizable(false)
 
-  win.webContents.openDevTools()
+ // win.webContents.openDevTools()
 }
