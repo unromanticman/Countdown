@@ -1,5 +1,4 @@
 body {
-  font-size: 25px;
   color: #ffffff;
   -webkit-app-region: drag;
   overflow-y: hidden;
@@ -7,12 +6,13 @@ body {
 }
 .container{
   background-color: #00000050;
-  padding: 4px;
+  padding: 8px;
   border-radius: 5px;
   width: 140;
   height: 75;
 }
 .time {
+  font-size: 25px;
   text-align: center;
   line-height: 28px;
 }
@@ -21,7 +21,10 @@ body {
   text-align: right;
   line-height: 28px;
 }
+input{
 
+  -webkit-app-region: no-drag;
+}
 .dark-btn {
   background-color: transparent;
   border: #fff solid 1px;
@@ -43,4 +46,9 @@ svg {
 .countdownText{
   display: none;
   font-size: 14px;
+}
+
+.settings{
+  -webkit-app-region: no-drag;
+
 }
