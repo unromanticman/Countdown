@@ -12,7 +12,7 @@ builder.build({
         },
         "win": {
             //"icon": path.resolve(__dirname, 'cat.png'),
-        }
+        },
     },
 }).then(
     data => console.log(data),
