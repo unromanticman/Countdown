@@ -2,9 +2,7 @@ const path = require('path');
 const builder = require('electron-builder');
 
 builder.build({
-
     projectDir: path.resolve(__dirname),  // 專案路徑 
-
     win: ['nsis', 'portable'],  // nsis . portable
     config: {
         "appId": "com.electron.countdown",
@@ -16,8 +14,7 @@ builder.build({
             //"icon": path.resolve(__dirname, 'cat.png'),
         }
     },
-})
-    .then(
-        data => console.log(data),
-        err => console.error(err)
-    );
+}).then(
+    data => console.log(data),
+    err => console.error(err)
+);

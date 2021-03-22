@@ -1,0 +1,111 @@
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: 1;
+    /* Firefox */
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: white;
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: white;
+}
+
+input {
+    padding: 5px 15px;
+    background: transparent;
+    border: #fff solid 1px;
+    cursor: pointer;
+    color: white;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+body {
+    color: #ffffff;
+    -webkit-app-region: drag;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.container {
+    background-color: #00000050;
+    padding: 8px;
+    border-radius: 5px;
+    width: 140;
+    height: 75;
+}
+
+.time {
+    font-size: 25px;
+    text-align: center;
+    line-height: 28px;
+}
+
+.control {
+    text-align: right;
+    line-height: 28px;
+}
+
+input {
+    -webkit-app-region: no-drag;
+}
+
+.dark-btn {
+    background-color: transparent;
+    border: #fff solid 1px;
+    border-radius: 4px;
+    color: #fff;
+    padding: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    -webkit-app-region: no-drag;
+}
+
+svg {
+    fill: white;
+    width: 16px;
+    height: 16px;
+}
+
+.countdownText {
+    display: none;
+    font-size: 14px;
+}
+
+.settings {
+    -webkit-app-region: no-drag;
+}
+
+.d-none {
+    display: none;
+}
+
+.d-inline {
+    display: inline;
+}
+
+.complete {
+    margin-bottom: 8px;
+    text-align: center;
+    font-size: 150px;
+    color: #ffffff75;
+}
+
+.fetal {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    text-align: center;
+    font-size: 50px;
+}
+
+.msg {
+    margin-bottom: 8px;
+    margin-top: -30px;
+    text-align: center;
+    font-size: 150px;
+}
