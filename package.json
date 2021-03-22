@@ -1,7 +1,7 @@
 {
-  "name": "electron-quick-start",
-  "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "name": "count-down",
+  "version": "2.0.0",
+  "description": "A Count Down Game Tool.",
   "main": "main.js",
   "scripts": {
     "start": "electron ."
@@ -14,7 +14,7 @@
     "tutorial",
     "demo"
   ],
-  "author": "GitHub",
+  "author": "Hei",
   "license": "CC0-1.0",
   "devDependencies": {
     "electron": "^11.3.0",
