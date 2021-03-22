@@ -1,6 +1,6 @@
 # countdown
 This is the countdown tool.
-
+The goal is to improve efficiency.
 
 
 ### dev
