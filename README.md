@@ -1,12 +1,14 @@
 # countdown
-countdown
+This is the countdown tool.
 
-dev
+
+
+### dev
 ```
 npm i
 npm start
 ```
-generate exe setup
+### build
 ```
 node bulid
 ```
