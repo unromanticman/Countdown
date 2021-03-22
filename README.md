@@ -1,12 +1,14 @@
-# countdown
-countdown
+# Countdown
+This is the countdown tool.  
+The goal is to improve efficiency.  
+Use Vue.
 
-dev
+### dev
 ```
 npm i
 npm start
 ```
-generate exe setup
+### build
 ```
 node bulid
 ```
