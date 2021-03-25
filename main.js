@@ -7,9 +7,11 @@ function createWindow () {
   const mainWindow = new BrowserWindow({
     frame: false,
     width: 140,
+    hasShadow:false,
     transparent: true,
+    background: '#00000000',
     height: 80,
-   resizable:false,
+    resizable:false,
     webPreferences: {
       enableRemoteModule: true,
       nodeIntegration: true,
