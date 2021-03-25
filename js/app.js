@@ -2,6 +2,7 @@ const moment = window.moment
 const screenshot = require('screenshot-desktop')
 const fs = require('fs')
 const path = require('path')
+const is = require('electron-is')
 
 // 設定檔
 let CONFIG = JSON.parse(fs.readFileSync(path.resolve(__dirname, 'config.json')))
@@ -65,11 +66,23 @@ const app = new Vue({
                 if (!fs.existsSync(dir)) {
                     fs.mkdirSync(dir);
                 }
-                screenshot({
-                    filename: '.\\screenshot\\' + "countdown-" +
-                        moment(new Date()).format('YYYY-MM-DD HH-mm-ss')
-                        + '.png'
-                })
+
+                if (is.macOS()) {
+                    // macOS 儲存路徑
+                    screenshot({
+                        filename: './screenshot/' + "countdown-" +
+                            moment(new Date()).format('YYYY-MM-DD HH-mm-ss')
+                            + '.png'
+                    })
+                } else {
+                    // windows 儲存路徑
+                    screenshot({
+                        filename: '.\\screenshot\\' + "countdown-" +
+                            moment(new Date()).format('YYYY-MM-DD HH-mm-ss')
+                            + '.png'
+                    })
+                }
+
             }, 1000)
         },
         // 顯示完成的訊息
