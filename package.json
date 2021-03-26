@@ -1,6 +1,6 @@
 {
   "name": "count-down",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "A Count Down Game Tool.",
   "main": "main.js",
   "scripts": {
@@ -15,7 +15,6 @@
     "demo"
   ],
   "author": "Hei",
-  "license": "CC0-1.0",
   "devDependencies": {
     "electron": "^11.3.0",
     "electron-builder": "^22.9.1"

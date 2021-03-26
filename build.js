@@ -11,7 +11,7 @@ builder.build({
             "output": "build/win"
         },
         "win": {
-            //"icon": path.resolve(__dirname, 'cat.png'),
+            "icon": path.resolve(__dirname, './img/countdownlogo.png'),
         },
     },
 }).then(
