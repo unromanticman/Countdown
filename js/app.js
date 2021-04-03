@@ -1,18 +1,28 @@
 const moment = window.moment
 const screenshot = require('screenshot-desktop')
-const fs = require('fs')
 const path = require('path')
 const is = require('electron-is')
-
-// 設定檔
-let CONFIG = JSON.parse(fs.readFileSync(path.resolve(__dirname, 'config.json')))
 
 const app = new Vue({
     el: "#app",
     data: {
-        currentSecond: CONFIG.countDownSecond,
+        currentSecond: 0,
         isRunning: false,
         status: ''
+    },
+    created: function () {
+        // 讀取設定檔案
+        let fs = require('fs');
+        let dir = './resources'
+        let CONFIG = {}
+        if (fs.existsSync(dir)) { // 因產生exe後路徑會被更改加上此判斷
+            CONFIG = JSON.parse(fs.readFileSync(path.resolve(__dirname, './../extraResources/config.json')))
+        } else {
+            CONFIG = JSON.parse(fs.readFileSync(path.resolve(__dirname, './extraResources/config.json')))
+        }
+
+        // 初始化時間
+        this.currentSecond = CONFIG.countDownSecond
     },
     computed: {
         time: function () {
@@ -61,8 +71,8 @@ const app = new Vue({
         // 螢幕截圖
         takeScreenshot: function () {
             let takeShot = setTimeout(() => {
-                var fs = require('fs');
-                var dir = './screenshot'
+                let fs = require('fs');
+                let dir = './screenshot'
                 if (!fs.existsSync(dir)) {
                     fs.mkdirSync(dir);
                 }
