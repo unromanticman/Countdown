@@ -5,7 +5,7 @@ This is the countdown tool.
 The goal is to improve efficiency.  
 Use Vue.js & Electron.js.
 
-### Version Download
+### version download
 [4.0.1] on windows  
 [Download Link](https://github.com/unromanticman/Countdown/releases/download/4.0.1/Countdown.Setup.4.0.1.exe
 )
