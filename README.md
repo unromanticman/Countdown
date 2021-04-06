@@ -14,3 +14,8 @@ npm start
 ```
 node bulid
 ```
+
+### demo
+<img src="img/demo1.PNG"/>  
+<img src="img/demo2.PNG"/>  
+
