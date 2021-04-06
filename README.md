@@ -5,6 +5,10 @@ This is the countdown tool.
 The goal is to improve efficiency.  
 Use Vue.
 
+### Version Download
+[4.0.1]  
+[Download Link](https://github.com/unromanticman/Countdown/releases/download/4.0.1/Countdown.Setup.4.0.1.exe
+)
 ### features
 
 1.finish screenshot  
