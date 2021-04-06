@@ -3,7 +3,7 @@
 
 This is the countdown tool.  
 The goal is to improve efficiency.  
-Use Vue.
+Use Vue.js & Electron.js.
 
 ### Version Download
 [4.0.1] on windows  
