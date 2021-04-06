@@ -6,7 +6,7 @@ The goal is to improve efficiency.
 Use Vue.
 
 ### Version Download
-[4.0.1]  
+[4.0.1] on windows  
 [Download Link](https://github.com/unromanticman/Countdown/releases/download/4.0.1/Countdown.Setup.4.0.1.exe
 )
 ### features
