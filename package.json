@@ -25,6 +25,7 @@
     "electron-builder": "^22.9.1"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.3",
     "electron-is": "^3.0.0",
     "moment": "^2.29.1",
     "screenshot-desktop": "^1.12.3"

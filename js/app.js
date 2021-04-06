@@ -8,21 +8,21 @@ const app = new Vue({
     data: {
         currentSecond: 0,
         isRunning: false,
-        status: ''
+        status: '', 
+        config:{}
     },
     created: function () {
         // 讀取設定檔案
         let fs = require('fs');
         let dir = './resources'
-        let CONFIG = {}
         if (fs.existsSync(dir)) { // 因產生exe後路徑會被更改加上此判斷
-            CONFIG = JSON.parse(fs.readFileSync(path.resolve(__dirname, './../extraResources/config.json')))
+            this.config = JSON.parse(fs.readFileSync(path.resolve(__dirname, './../extraResources/config.json')))
         } else {
-            CONFIG = JSON.parse(fs.readFileSync(path.resolve(__dirname, './extraResources/config.json')))
+            this.config =  JSON.parse(fs.readFileSync(path.resolve(__dirname, './extraResources/config.json')))
         }
-
+        
         // 初始化時間
-        this.currentSecond = CONFIG.countDownSecond
+        this.currentSecond = this.config.countDownSecond
     },
     computed: {
         time: function () {
@@ -57,7 +57,7 @@ const app = new Vue({
                     // 螢幕截圖紀錄
                     this.takeScreenshot()
                     // 更新狀態
-                    this.status = '[Finish ' + this.timeFormat(CONFIG.countDownSecond) + ']'
+                    this.status = '[Finish]'
                 }
             }, 1000)
         },
