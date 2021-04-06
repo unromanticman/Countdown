@@ -5,6 +5,10 @@ This is the countdown tool.
 The goal is to improve efficiency.  
 Use Vue.
 
+1.finish screenshot  
+2.custom countdown second  
+3.always window top  
+
 ### dev
 ```
 npm i
