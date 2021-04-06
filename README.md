@@ -11,9 +11,9 @@ Use Vue.
 )
 ### features
 
-1.finish screenshot  
-2.custom countdown second  
-3.always window top  
+1.finish screenshot  (Example C:\Users\user\AppData\Local\Programs\count-down\screenshot)  
+3.custom countdown second  
+4.always window top  
 
 ### dev
 ```
