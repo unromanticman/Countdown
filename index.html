@@ -17,11 +17,12 @@
       <div class="time">{{time}}</div>
       <div class="control">
         <div v-if="!isRunning"> 
-          <!-- <i class="fas fa-sliders-h"></i> -->
+          <i class="fas fa-sliders-h" v-on:click="openFolder"></i>
           <button class="dark-btn" v-on:click="start">START</button>
         </div>
-        <div v-if="isRunning">{{status}}
-        </div>
+        <i v-if="status === '[Finish]'" class="fas fa-sliders-h" v-on:click="openFolder"></i>
+        <span v-if="isRunning">{{status}}
+        </span>
       </div>
     </div>
   </div>

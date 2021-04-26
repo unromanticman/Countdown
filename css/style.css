@@ -56,6 +56,7 @@ input {
 }
 
 .dark-btn {
+    cursor: pointer;
     background-color: transparent;
     border: #fff solid 1px;
     border-radius: 4px;
@@ -110,5 +111,8 @@ svg {
     font-size: 150px;
 }
 .fa-sliders-h{
+    cursor: pointer;
+    padding-top: 5px;
     margin-right: 3px;
+    -webkit-app-region: no-drag;
 }

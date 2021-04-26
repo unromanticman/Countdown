@@ -8,8 +8,8 @@ const app = new Vue({
     data: {
         currentSecond: 0,
         isRunning: false,
-        status: '', 
-        config:{}
+        status: '',
+        config: {}
     },
     created: function () {
         // 讀取設定檔案
@@ -18,9 +18,9 @@ const app = new Vue({
         if (fs.existsSync(dir)) { // 因產生exe後路徑會被更改加上此判斷
             this.config = JSON.parse(fs.readFileSync(path.resolve(__dirname, './../extraResources/config.json')))
         } else {
-            this.config =  JSON.parse(fs.readFileSync(path.resolve(__dirname, './extraResources/config.json')))
+            this.config = JSON.parse(fs.readFileSync(path.resolve(__dirname, './extraResources/config.json')))
         }
-        
+
         // 初始化時間
         this.currentSecond = this.config.countDownSecond
     },
@@ -34,6 +34,11 @@ const app = new Vue({
             this.isRunning = true
             this.status = 'Running...'
             this.startCountDown()
+        },
+        openFolder: function () {
+            // 開啟screenshot資料夾
+            const { shell } = require('electron')
+            shell.openPath(path.resolve(__dirname, './screenshot'))
         },
         startCountDown: function () {
             this.timer = window.setInterval(() => {
