@@ -6,8 +6,8 @@ The goal is to improve efficiency.
 Use Vue.js & Electron.js.
 
 ### version download
-[4.0.1] on windows  
-[Download Link](https://github.com/unromanticman/Countdown/releases/download/4.0.1/Countdown.Setup.4.0.1.exe
+[5.0.0] on windows  
+[Download Link](https://github.com/unromanticman/Countdown/releases/download/5.0.0/Countdown.Setup.5.0.0.exe
 )
 ### features
 
