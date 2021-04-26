@@ -36,9 +36,23 @@ const app = new Vue({
             this.startCountDown()
         },
         openFolder: function () {
+            // screenshot建置
+            let fs = require('fs');
+            let dir = './screenshot'
+            if (!fs.existsSync(dir)) {
+                fs.mkdirSync(dir);
+            }
+
             // 開啟screenshot資料夾
             const { shell } = require('electron')
-            shell.openPath(path.resolve(__dirname, './screenshot'))
+            // 讀取設定檔案
+            let fs = require('fs');
+            let dir = './resources'
+            if (fs.existsSync(dir)) { // 因產生exe後路徑會被更改加上此判斷
+                shell.openPath(path.resolve(__dirname, './../../screenshot'))
+            } else {
+                shell.openPath(path.resolve(__dirname, './screenshot'))
+            }
         },
         startCountDown: function () {
             this.timer = window.setInterval(() => {

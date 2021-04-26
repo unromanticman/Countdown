@@ -18,7 +18,7 @@ npm start
 ```
 ### build
 ```
-node bulid
+node build
 ```
 
 ### demo
