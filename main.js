@@ -24,7 +24,7 @@ function createWindow () {
   mainWindow.loadFile('index.html')
   
   // prevent max window
-  // mainWindow.setMaximizable(false)
+  mainWindow.setMaximizable(false)
 
 
   // Open the DevTools.
